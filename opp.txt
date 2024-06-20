@@ -1,0 +1,13 @@
+function CheckBoneMob()
+    for i,v in next, Enemies:GetChildren() do
+        if v:IsA("Model") and table.find(bonemobs, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+            return v
+        end
+    end
+end
+local cakemobs = {
+    "Cookie Crafter",
+    "Cake Guard",
+    "Baking Staff",
+    "Head Baker"
+}
